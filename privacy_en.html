@@ -66,7 +66,7 @@
   <header>
     <a href="index.html" class="brand-link">2Act</a>
     <h1>Privacy Policy</h1>
-    <div class="meta">In force from May 1, 2026</div>
+    <div class="meta">In force from May 5, 2026</div>
     <div class="lang-switch"><a href="privacy.html">עברית</a> · English</div>
   </header>
 
@@ -93,22 +93,31 @@
     <li><strong>Basic usage data:</strong> sign-up date, login times, internal user identifier.</li>
   </ul>
   <p>
-    <strong>What we do not collect:</strong> we do not collect location data, do not use ad tracking,
-    and do not sell data to anyone.
+    <strong>What we do not collect:</strong> we do not use ad tracking and do not sell data to anyone.
+    Location/GPS data is collected <strong>only</strong> during an active outdoor run — see Section 3 for details.
   </p>
 
   <h2>3. Device sensor and notification access</h2>
   <p>The App requests access to the following sensors and services, only after your explicit approval:</p>
   <ul>
-    <li><strong>Motion sensors (Pedometer):</strong> to count your daily steps. Data is stored on the device and synced to your account.</li>
+    <li><strong>Motion sensors (Pedometer):</strong> to count your daily steps when Apple Health access is unavailable. Data is stored on the device and synced to your account.</li>
+    <li><strong>Apple Health (HealthKit) — read-only:</strong> on iPhone we read your daily step count from Apple Health to display accurate totals aggregated from all your sources (iPhone and Apple Watch). We <strong>do not</strong> write any data to Apple Health, and we do not read any other data type (weight, sleep, heart rate, workouts, etc.). Data is stored on the device and synced to your account in the same way as Pedometer steps.</li>
     <li><strong>Camera and Photo Library:</strong> only when you choose to take or upload a photo (profile / meal).</li>
     <li>
-      <strong>Push Notifications:</strong> only if you allow them — for daily reminders (workout, water, mood).
-      Notifications are local only (Local Notifications) and are not sent from our servers. We do not share notification content with third parties.
-      You can disable notifications at any time from iPhone Settings → Notifications → 2Act, or from the App's settings.
+      <strong>GPS / Location — outdoor runs only:</strong> when you start an outdoor run, the App accesses GPS
+      to calculate distance and pace in real time. Raw GPS coordinates are <strong>never sent to or stored on our servers</strong>.
+      Only aggregated metrics (total distance, average pace) are saved to your account when the run ends.
+      You can select "Indoor mode" for any run to avoid GPS entirely.
+    </li>
+    <li>
+      <strong>Push Notifications:</strong> only if you allow them.<br>
+      • <em>Local notifications:</em> daily reminders for workout, water, and mood — generated on-device only, no server involved.<br>
+      • <em>Remote push (APNs):</em> community updates (reactions, comments) — sent from our servers via Apple Push Notification Service.
+      Your APNs device token is stored in your account for delivery purposes. <strong>Notification content is not stored server-side</strong>.
+      You can manage each notification type independently in App settings, or disable all notifications via iPhone Settings → Notifications → 2Act.
     </li>
   </ul>
-  <p>We do <strong>not</strong> request access to: microphone, FaceID, location, calendar, contacts, or HealthKit data.</p>
+  <p>We do <strong>not</strong> request access to: microphone, FaceID, calendar, or contacts. Apple Health access is limited to reading step count only (see above). GPS is active only during an active outdoor run (see above).</p>
 
   <h2>4. How we use your data</h2>
   <ul>
@@ -155,10 +164,17 @@
   </ul>
   <p>We <strong>do not share</strong> health data, workouts, nutrition, steps, age, weight, or personal goals with any third party — not for advertising, not for marketing, and not for research.</p>
 
-  <h2>6. Community content</h2>
+  <h2>6. Community content and leaderboard</h2>
   <p>
     When you publish a post or comment in the community, the content will be shown to other users. You can delete your content at any time.
     We maintain zero tolerance for harmful content — there is a reporting system and we may hide content following reports.
+  </p>
+  <p>
+    <strong>Community Leaderboard (75-day challenge):</strong> participants in the community challenge may display their progress
+    on a leaderboard visible to all participants. Data shown includes: display name, profile picture, days completed,
+    and average daily steps. <strong>Step data is hidden by default</strong> — you must explicitly enable "Show steps publicly"
+    in Profile → Preferences for your steps to appear. You can opt out at any time; doing so removes your step data
+    from the leaderboard immediately.
   </p>
 
   <h2>7. Data retention and deletion</h2>
@@ -226,7 +242,7 @@
   </p>
 
   <div class="updated">
-    <strong>Last updated:</strong> April 28, 2026
+    <strong>Last updated:</strong> May 5, 2026
   </div>
 
   <p style="margin-top: 28px; font-size: 12px; color: #8A8A80; text-align: center;">
