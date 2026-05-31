@@ -87,7 +87,7 @@
     <li><strong>Account details:</strong> name, email, profile picture (if uploaded).</li>
     <li><strong>Personal details:</strong> birth year, gender, height, weight — used to compute personalized goals.</li>
     <li><strong>Activity data:</strong> completed workouts, nutrition tracking, water intake, daily steps, goals and achievements.</li>
-    <li><strong>Photos:</strong> meal photos that you choose to upload.</li>
+    <li><strong>Photos:</strong> meal photos that you choose to upload. These photos are sent to our AI provider for nutrition analysis (see Section 5).</li>
     <li><strong>Community content:</strong> posts, comments, and reactions you publish.</li>
     <li><strong>Preferences:</strong> diet type, health goals, notification settings.</li>
     <li><strong>Basic usage data:</strong> sign-up date, login times, internal user identifier.</li>
@@ -101,7 +101,7 @@
   <p>The App requests access to the following sensors and services, only after your explicit approval:</p>
   <ul>
     <li><strong>Motion sensors (Pedometer):</strong> to count your daily steps when Apple Health access is unavailable. Data is stored on the device and synced to your account.</li>
-    <li><strong>Apple Health (HealthKit) — read-only:</strong> on iPhone we read your daily step count from Apple Health to display accurate totals aggregated from all your sources (iPhone and Apple Watch). We <strong>do not</strong> write any data to Apple Health, and we do not read any other data type (weight, sleep, heart rate, workouts, etc.). Data is stored on the device and synced to your account in the same way as Pedometer steps.</li>
+    <li><strong>Apple Health (HealthKit) — read-only:</strong> on iPhone we read from Apple Health your daily step count, and — during running workouts only — walking/running distance, active energy, and heart rate, to display accurate activity data and real-time run metrics. We <strong>do not</strong> write any data to Apple Health. Health data is read and processed on the device; only summary metrics (such as daily steps and a run summary) are synced to your account. This data is not used for advertising and is not sold.</li>
     <li><strong>Camera and Photo Library:</strong> only when you choose to take or upload a photo (profile / meal).</li>
     <li>
       <strong>GPS / Location — outdoor runs only:</strong> when you start an outdoor run, the App accesses GPS
@@ -117,7 +117,7 @@
       You can manage each notification type independently in App settings, or disable all notifications via iPhone Settings → Notifications → 2Act.
     </li>
   </ul>
-  <p>We do <strong>not</strong> request access to: microphone, FaceID, calendar, or contacts. Apple Health access is limited to reading step count only (see above). GPS is active only during an active outdoor run (see above).</p>
+  <p>We do <strong>not</strong> request access to: microphone, FaceID, calendar, or contacts. Apple Health access is read-only and limited to the data types listed above. GPS is active only during an active outdoor run (see above).</p>
 
   <h2>4. How we use your data</h2>
   <ul>
@@ -161,8 +161,17 @@
     <li><strong>Apple App Store + StoreKit</strong> — handles all purchase, billing, and subscription processes. We <strong>do not see</strong> your credit card details — Apple handles them exclusively. We receive only a purchase identifier and subscription status.</li>
     <li><strong>RevenueCat</strong> (RevenueCat Inc., USA) — subscription validation and management service. Receives an anonymous user identifier and subscription status only, no personal or health data.</li>
     <li><strong>Apple Push Notification Service (APNs)</strong> — when notifications are sent, Apple handles delivery to your device. Notification content is created in-app only.</li>
+    <li>
+      <strong>Anthropic</strong> (Anthropic PBC, USA) — the AI provider that powers the "Gia" assistant and meal-photo analysis. To deliver the service we send it your chat messages and relevant profile context (such as goals, preferences, and activity data), as well as <strong>meal and nutrition-label photos</strong> for analysis. Processing is performed under Anthropic's API terms; <strong>the data is not used to train models</strong>, is not used for advertising, and is not sold. Transfer is encrypted.
+    </li>
+    <li>
+      <strong>PostHog</strong> (PostHog Inc., USA) — product analytics to improve the app. Collects usage events and an internal user identifier only; <strong>no</strong> health or nutrition data, no advertising identifier (IDFA), and no ad tracking.
+    </li>
+    <li>
+      <strong>Expo</strong> (Expo / 650 Industries, USA) — used to deliver push notifications (your push token) and over-the-air app updates, which transmit basic app-version and device information.
+    </li>
   </ul>
-  <p>We <strong>do not share</strong> health data, workouts, nutrition, steps, age, weight, or personal goals with any third party — not for advertising, not for marketing, and not for research.</p>
+  <p>We share data <strong>only</strong> with the service providers listed above, and only to operate the service. We do not share health, workout, nutrition, steps, age, weight, or personal-goal data for advertising or marketing, and we do not sell it to anyone. Our AI providers do not use the data to train models.</p>
 
   <h2>6. Community content and leaderboard</h2>
   <p>
@@ -225,7 +234,7 @@
   <p>
     For requests from residents of the EU or California, please contact us by email at
     <a href="mailto:support@2act-app.com">support@2act-app.com</a> with the subject "GDPR Request" or "CCPA Request".
-    We will respond within 30 days. Data is transferred to the US using customary mechanisms in line with applicable data protection regulations.
+    We will respond within 30 days. Data is transferred to the US (our service providers — Supabase, Anthropic, PostHog, Expo, and RevenueCat — are located in the US) using customary mechanisms in line with applicable data protection regulations.
   </p>
 
   <h2>12. Changes to this policy</h2>
@@ -242,7 +251,7 @@
   </p>
 
   <div class="updated">
-    <strong>Last updated:</strong> May 5, 2026
+    <strong>Last updated:</strong> May 31, 2026
   </div>
 
   <p style="margin-top: 28px; font-size: 12px; color: #8A8A80; text-align: center;">
