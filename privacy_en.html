@@ -102,7 +102,6 @@
   <ul>
     <li><strong>Motion sensors (Pedometer):</strong> to count your daily steps when Apple Health access is unavailable. Data is stored on the device and synced to your account.</li>
     <li><strong>Apple Health (HealthKit) — read-only:</strong> on iPhone we read from Apple Health your daily step count, and — during running workouts only — walking/running distance, active energy, and heart rate, to display accurate activity data and real-time run metrics. We <strong>do not</strong> write any data to Apple Health. Health data is read and processed on the device; only summary metrics (such as daily steps and a run summary) are synced to your account. This data is not used for advertising and is not sold.</li>
-    <li><strong>Health Connect (Android) — read-only:</strong> on Android devices we request permission to read your <strong>step count</strong> only, via Google Health Connect, to display your daily activity in the app (activity rings, the daily steps goal, and the opt-in steps leaderboard). We <strong>do not</strong> write any data to Health Connect. Step data is read and processed on the device; only summary metrics are synced to your account to enable syncing across your devices, and can be deleted at any time by deleting your account. We do not share, sell, or transfer health data to third parties, and we do not use it for advertising. This use complies with Google's Health Connect policy and Limited Use requirements.</li>
     <li><strong>Camera and Photo Library:</strong> only when you choose to take or upload a photo (profile / meal).</li>
     <li>
       <strong>GPS / Location — outdoor runs only:</strong> when you start an outdoor run, the App accesses GPS
@@ -113,7 +112,7 @@
     <li>
       <strong>Push Notifications:</strong> only if you allow them.<br>
       • <em>Local notifications:</em> daily reminders for workout, water, and mood — generated on-device only, no server involved.<br>
-      • <em>Remote push (APNs):</em> community updates (reactions, comments) — sent from our servers via Apple Push Notification Service.
+      • <em>Remote push (APNs):</em> community updates (reactions, comments), shared-challenge activity (a friend joined, completed a day, cheered you), and invite/reward updates (a friend joined via your code, a reminder before your trial gift ends) — sent from our servers via Apple Push Notification Service.
       Your APNs device token is stored in your account for delivery purposes. <strong>Notification content is not stored server-side</strong>.
       You can manage each notification type independently in App settings, or disable all notifications via iPhone Settings → Notifications → 2Act.
     </li>
@@ -185,6 +184,28 @@
     and average daily steps. <strong>Step data is hidden by default</strong> — you must explicitly enable "Show steps publicly"
     in Profile → Preferences for your steps to appear. You can opt out at any time; doing so removes your step data
     from the leaderboard immediately.
+  </p>
+  <p>
+    <strong>Shared challenges and the participants board:</strong> when you join a shared challenge with a friend
+    (or via a code someone shared), by joining you consent to your first name, profile picture, and daily challenge
+    progress (e.g. water, steps, workouts, days or sessions completed) being shown to the other participants in that
+    challenge. When a shared-challenge code is distributed publicly (e.g. on a Story), participants you do not know may
+    join and see this data. The data is visible only to participants of that challenge, never to the general public.
+    You can leave a shared challenge at any time, which removes you from the participants board.
+  </p>
+
+  <h2>6a. Referral program and invites</h2>
+  <p>
+    <strong>Invite codes and rewards:</strong> when you invite a friend with your referral code, we store the link
+    between your account and your friend's account to grant the rewards (an extended trial for the invitee, and a free
+    premium month for you when your friend starts a paid subscription). You receive a notification when a friend joins
+    through you.
+  </p>
+  <p>
+    <strong>Soft device identifier:</strong> when a referral code is redeemed we compute a hashed value of the system
+    device identifier (IDFV on iOS / Android ID) and use it solely to prevent abuse of the rewards (e.g. one device
+    creating multiple accounts). The value is hashed before transmission, does not reveal the device identity, and is
+    not used for advertising or tracking.
   </p>
 
   <h2>7. Data retention and deletion</h2>
