@@ -66,7 +66,7 @@
   <header>
     <a href="index.html" class="brand-link">2Act</a>
     <h1>Privacy Policy</h1>
-    <div class="meta">In force from May 5, 2026</div>
+    <div class="meta">In force from October 19, 2026 (update: AI-sharing consent, analytics, run routes)</div>
     <div class="lang-switch"><a href="privacy.html">עברית</a> · English</div>
   </header>
 
@@ -105,8 +105,10 @@
     <li><strong>Camera and Photo Library:</strong> only when you choose to take or upload a photo (profile / meal).</li>
     <li>
       <strong>GPS / Location — outdoor runs only:</strong> when you start an outdoor run, the App accesses GPS
-      to calculate distance and pace in real time. Raw GPS coordinates are <strong>never sent to or stored on our servers</strong>.
-      Only aggregated metrics (total distance, average pace) are saved to your account when the run ends.
+      to calculate distance and pace in real time and draw your route. When the run ends, your account stores the aggregated
+      metrics (distance, pace) <strong>and the route points</strong>, so you can see the route in your history and share card, even
+      after changing phones. Route points are kept only in your secured workout backup, are not shown to other users, and are
+      never sent to analytics or to the AI provider.
       You can select "Indoor mode" for any run to avoid GPS entirely.
     </li>
     <li>
@@ -144,7 +146,14 @@
     <li>Improving the App's algorithms (without sharing with third parties).</li>
   </ul>
   <p>
-    You can withdraw your consent at any time by deleting your account (Profile → "Delete Account") — this deletion will include
+    <strong>Sharing with the AI provider (Anthropic) requires a separate consent.</strong> Before you first use Gia or meal
+    scanning, the app shows what is sent: your messages, meal and label photos, age, height, weight, goals, fitness level and
+    coaching style, health flags you selected (for example injury, pregnancy or postpartum), today's workouts, challenge,
+    meals and water, and your Apple Health step count. Without approval on that screen nothing is sent to Anthropic and the
+    rest of the app keeps working. You can withdraw it any time in Profile → "פרטיות AI"; from then on nothing more is sent.
+  </p>
+  <p>
+    You can withdraw your consent to health-data processing at any time by deleting your account (Profile → "Delete Account") — this deletion will include
     all of your health data as detailed in section 7.
   </p>
 
@@ -162,10 +171,10 @@
     <li><strong>RevenueCat</strong> (RevenueCat Inc., USA) — subscription validation and management service. Receives an anonymous user identifier and subscription status only, no personal or health data.</li>
     <li><strong>Apple Push Notification Service (APNs)</strong> — when notifications are sent, Apple handles delivery to your device. Notification content is created in-app only.</li>
     <li>
-      <strong>Anthropic</strong> (Anthropic PBC, USA) — the AI provider that powers the "Gia" assistant and meal-photo analysis. To deliver the service we send it your chat messages and relevant profile context (such as goals, preferences, and activity data), as well as <strong>meal and nutrition-label photos</strong> for analysis. Processing is performed under Anthropic's API terms; <strong>the data is not used to train models</strong>, is not used for advertising, and is not sold. Transfer is encrypted.
+      <strong>Anthropic</strong> (Anthropic PBC, USA) — the AI provider that powers the "Gia" assistant and meal-photo analysis. <strong>Only after your explicit in-app consent</strong> (see section 4a) we send it your chat messages, the profile, health and activity data listed in section 4a, and <strong>meal and nutrition-label photos</strong> for analysis. Processing is performed under Anthropic's API terms; <strong>the data is not used to train models</strong>, is not used for advertising, and is not sold. Transfer is encrypted.
     </li>
     <li>
-      <strong>PostHog</strong> (PostHog Inc., USA) — product analytics to improve the app. Collects usage events and an internal user identifier only; <strong>no</strong> health or nutrition data, no advertising identifier (IDFA), and no ad tracking.
+      <strong>PostHog</strong> (PostHog Inc., USA) — product analytics to improve the app. Collects usage events (such as a screen opened or a step completed), technical error data, device and app version, and an internal user identifier; <strong>no</strong> health, fitness, body or nutrition data (including nothing from Apple Health), no advertising identifier (IDFA), no screen recording, and no ad tracking.
     </li>
     <li>
       <strong>Expo</strong> (Expo / 650 Industries, USA) — used to deliver push notifications (your push token) and over-the-air app updates, which transmit basic app-version and device information.
@@ -214,7 +223,8 @@
   </p>
   <ul>
     <li><strong>Immediately:</strong> your account becomes inaccessible — you can no longer log in, your content is no longer shown in the community, and your device session is closed.</li>
-    <li><strong>Within 30 days:</strong> all of your data is permanently deleted from our servers (profile, workouts, nutrition, posts, photos, goals).</li>
+    <li><strong>Within 30 days:</strong> all of your data is permanently deleted from our servers (profile, workouts, nutrition, posts, photos, goals), as well as the usage events linked to your account at our analytics provider.</li>
+    <li><strong>Subscription:</strong> deleting your account does not cancel an active App Store subscription. Cancel it in your Apple ID settings (the deletion screen links there).</li>
     <li><strong>Exceptions:</strong> items we are legally required to retain (such as billing records for tax purposes) will be retained only for the shortest period required by law.</li>
   </ul>
   <p>Deletion is <strong>irreversible</strong> — there is no way to restore a deleted account.</p>
