@@ -66,7 +66,7 @@
   <header>
     <a href="index.html" class="brand-link">2Act</a>
     <h1>Privacy Policy</h1>
-    <div class="meta">In force from October 19, 2026 (update: AI-sharing consent, analytics, run routes)</div>
+    <div class="meta">In force from October 25, 2026 (update: Garmin watch connection)</div>
     <div class="lang-switch"><a href="privacy.html">עברית</a> · English</div>
   </header>
 
@@ -82,11 +82,12 @@
   </p>
 
   <h2>2. Data we collect</h2>
-  <p>We collect only data that users provide directly, or that is generated through use of the App:</p>
+  <p>We collect only data that users provide directly, that is generated through use of the App, or that comes from an external service you choose to connect yourself (such as Garmin, see section 3a):</p>
   <ul>
     <li><strong>Account details:</strong> name, email, profile picture (if uploaded).</li>
     <li><strong>Personal details:</strong> birth year, gender, height, weight — used to compute personalized goals.</li>
     <li><strong>Activity data:</strong> completed workouts, nutrition tracking, water intake, daily steps, goals and achievements.</li>
+    <li><strong>Running data from Garmin (only if you connect it):</strong> summaries and routes of runs you completed on your Garmin watch. Full details in section 3a.</li>
     <li><strong>Photos:</strong> meal photos that you choose to upload. These photos are sent to our AI provider for nutrition analysis (see Section 5).</li>
     <li><strong>Community content:</strong> posts, comments, and reactions you publish.</li>
     <li><strong>Preferences:</strong> diet type, health goals, notification settings.</li>
@@ -121,6 +122,33 @@
   </ul>
   <p>We do <strong>not</strong> request access to: microphone, FaceID, calendar, or contacts. Apple Health access is read-only and limited to the data types listed above. GPS is active only during an active outdoor run (see above).</p>
 
+  <h2>3a. Garmin watch connection (optional)</h2>
+  <p>
+    Connecting Garmin is <strong>entirely optional</strong>. It is enabled only if you choose to connect your Garmin Connect
+    account from within the App and approve it on Garmin's own sign-in screen. Without a connection, no data passes between us and Garmin.
+  </p>
+  <ul>
+    <li><strong>What we send to Garmin:</strong> your planned running workouts (workout name, date, steps, and pace or heart-rate
+      targets) so they appear in your Garmin Connect calendar and on your watch. We do not send Garmin your profile details.
+      Garmin handles this data under its own privacy policy.</li>
+    <li><strong>What we receive from Garmin:</strong> summaries of runs you completed on your watch: activity type, time, duration,
+      distance, pace, average and maximum heart rate, cadence, laps, and the run's GPS route (if your watch recorded one). The route
+      gets the same protection as run routes recorded by your phone (section 3): it is not shown to other users and is not sent to
+      analytics or AI. We do not request sleep, stress, menstrual-cycle or general health data from Garmin.</li>
+    <li><strong>Why:</strong> to mark the session as completed, show the run and its route in your history, and adjust the next
+      sessions in your plan (for example, easing off after a very hard or missed session). This adjustment is made by our own
+      server-side training rules.</li>
+    <li><strong>How it is stored:</strong> only in our secure database (Supabase). Garmin access tokens are kept server-side only,
+      encrypted, and are never stored in the App or on your device.</li>
+    <li><strong>What we never do with Garmin data:</strong> it is <strong>never</strong> sent to our AI provider or any other AI
+      service, even if you consented to AI sharing under section 4a. It is not used to train models, not sent to analytics,
+      not used for advertising, and not sold.</li>
+    <li><strong>Disconnecting:</strong> you can disconnect Garmin at any time from the App settings (or from Garmin Connect).
+      When you disconnect, we immediately delete the access tokens and notify Garmin of the disconnection; from that moment no further
+      data is received or sent. Runs already imported stay in your history like any other run until you delete your account or ask us
+      by email to delete them. Any other data received from Garmin is deleted within 30 days of disconnecting.</li>
+  </ul>
+
   <h2>4. How we use your data</h2>
   <ul>
     <li>Operating the App and displaying your personalized content (Dashboard, workouts, nutrition, goals).</li>
@@ -134,7 +162,8 @@
   <p>
     Some of the data we collect qualifies as <strong>"sensitive information"</strong> under Israel's Privacy Protection Law,
     5741-1981 (section 7) and the Privacy Protection Regulations (Information Security), 5777-2017 — including: birth year, gender,
-    height, weight, health goals, body fat percentage (if entered), injury history (if entered), step count, and physical activity.
+    height, weight, health goals, body fat percentage (if entered), injury history (if entered), step count, and physical activity
+    (including running and heart-rate data received from Garmin, if you connect it).
   </p>
   <p>
     By continuing to use the App and accepting this policy, you <strong>expressly consent</strong> to the processing of this information
@@ -151,6 +180,7 @@
     coaching style, health flags you selected (for example injury, pregnancy or postpartum), today's workouts, challenge,
     meals and water, and your Apple Health step count. Without approval on that screen nothing is sent to Anthropic and the
     rest of the app keeps working. You can withdraw it any time in Profile → "פרטיות AI"; from then on nothing more is sent.
+    <strong>Data received from Garmin is not included in this sharing</strong> and is never sent to Anthropic.
   </p>
   <p>
     You can withdraw your consent to health-data processing at any time by deleting your account (Profile → "Delete Account") — this deletion will include
@@ -178,6 +208,12 @@
     </li>
     <li>
       <strong>Expo</strong> (Expo / 650 Industries, USA) — used to deliver push notifications (your push token) and over-the-air app updates, which transmit basic app-version and device information.
+    </li>
+    <li>
+      <strong>Garmin</strong> (Garmin Ltd. and its affiliates) — <strong>only if you connect your Garmin account</strong> (see section 3a).
+      We send Garmin your planned running workouts and receive summaries and routes of runs you completed. Garmin handles the data
+      in your Garmin Connect account under its own privacy policy. Garmin data is stored by us only in Supabase and is not passed
+      to any other provider on this list.
     </li>
   </ul>
   <p>We share data <strong>only</strong> with the service providers listed above, and only to operate the service. We do not share health, workout, nutrition, steps, age, weight, or personal-goal data for advertising or marketing, and we do not sell it to anyone. Our AI providers do not use the data to train models.</p>
@@ -224,6 +260,9 @@
   <ul>
     <li><strong>Immediately:</strong> your account becomes inaccessible — you can no longer log in, your content is no longer shown in the community, and your device session is closed.</li>
     <li><strong>Within 30 days:</strong> all of your data is permanently deleted from our servers (profile, workouts, nutrition, posts, photos, goals), as well as the usage events linked to your account at our analytics provider.</li>
+    <li><strong>Garmin:</strong> if you connected Garmin, deleting your account disconnects it immediately: access tokens are deleted,
+      Garmin is notified of the disconnection, and all data received from Garmin is deleted together with the rest of your data.
+      Disconnecting Garmin without deleting your account is described in section 3a.</li>
     <li><strong>Subscription:</strong> deleting your account does not cancel an active App Store subscription. Cancel it in your Apple ID settings (the deletion screen links there).</li>
     <li><strong>Exceptions:</strong> items we are legally required to retain (such as billing records for tax purposes) will be retained only for the shortest period required by law.</li>
   </ul>
@@ -235,6 +274,7 @@
     <li><strong>Access</strong> all of your data — it is available within the App (profile, history, goals).</li>
     <li><strong>Correct</strong> personal details from the Profile screen.</li>
     <li><strong>Delete your account</strong> and all data: Profile → "Delete Account". Full details in section 7 above.</li>
+    <li><strong>Disconnect Garmin</strong> at any time from the App settings, without affecting the rest of the App.</li>
     <li>Contact us by email for any other privacy-related request.</li>
   </ul>
 
@@ -267,6 +307,7 @@
     For requests from residents of the EU or California, please contact us by email at
     <a href="mailto:support@2act-app.com">support@2act-app.com</a> with the subject "GDPR Request" or "CCPA Request".
     We will respond within 30 days. Data is transferred to the US (our service providers — Supabase, Anthropic, PostHog, Expo, and RevenueCat — are located in the US) using customary mechanisms in line with applicable data protection regulations.
+    If you connect Garmin, your planned running workouts are transferred to Garmin, which processes them under its own privacy policy.
   </p>
 
   <h2>12. Changes to this policy</h2>
@@ -283,7 +324,7 @@
   </p>
 
   <div class="updated">
-    <strong>Last updated:</strong> May 31, 2026
+    <strong>Last updated:</strong> October 25, 2026
   </div>
 
   <p style="margin-top: 28px; font-size: 12px; color: #8A8A80; text-align: center;">
