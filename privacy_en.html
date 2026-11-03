@@ -66,7 +66,7 @@
   <header>
     <a href="index.html" class="brand-link">2Act</a>
     <h1>Privacy Policy</h1>
-    <div class="meta">In force from October 25, 2026 (update: Garmin watch connection)</div>
+    <div class="meta">Effective November 3, 2026 (update: writing runs to Apple Health, sending workouts to Apple Watch, and calendar sync)</div>
     <div class="lang-switch"><a href="privacy.html">עברית</a> · English</div>
   </header>
 
@@ -102,7 +102,9 @@
   <p>The App requests access to the following sensors and services, only after your explicit approval:</p>
   <ul>
     <li><strong>Motion sensors (Pedometer):</strong> to count your daily steps when Apple Health access is unavailable. Data is stored on the device and synced to your account.</li>
-    <li><strong>Apple Health (HealthKit) — read-only:</strong> on iPhone we read from Apple Health your daily step count, and — during running workouts only — walking/running distance, active energy, and heart rate, to display accurate activity data and real-time run metrics. We <strong>do not</strong> write any data to Apple Health. Health data is read and processed on the device; only summary metrics (such as daily steps and a run summary) are synced to your account. This data is not used for advertising and is not sold.</li>
+    <li><strong>Apple Health (HealthKit):</strong> on iPhone we read from Apple Health your daily step count and, during running workouts only, walking/running distance, active energy and heart rate, to show real-time run metrics. If you turned on sending workouts to Apple Watch (section 3b), we also read running workouts you recorded on the watch, to mark the planned session as done. The route of a watch run is read from Apple Health on the device and shown there only; it is not stored by us and is not uploaded.
+      <br><strong>Writing (only if you allow it):</strong> a run or walk you recorded in the app is saved to Apple Health as one workout: start and end time, plus distance and active energy as workout totals when they were measured. We do not write routes, heart rate or separate samples.
+      <br>Health data is read and processed on the device; only summary metrics (such as daily steps and a run summary) are synced to your account. This data is not used for advertising, not sold, not sent to analytics and not sent to AI. You can revoke access at any time in iPhone Settings: Health → Data Access → 2Act.</li>
     <li><strong>Camera and Photo Library:</strong> only when you choose to take or upload a photo (profile / meal).</li>
     <li>
       <strong>GPS / Location — outdoor runs only:</strong> when you start an outdoor run, the App accesses GPS
@@ -120,7 +122,7 @@
       You can manage each notification type independently in App settings, or disable all notifications via iPhone Settings → Notifications → 2Act.
     </li>
   </ul>
-  <p>We do <strong>not</strong> request access to: microphone, FaceID, calendar, or contacts. Apple Health access is read-only and limited to the data types listed above. GPS is active only during an active outdoor run (see above).</p>
+  <p>We do <strong>not</strong> request access to: microphone, FaceID or contacts. Calendar access is requested only if you choose to sync your plan to a calendar (section 3c). Apple Health access is limited to the data types listed above: reading, and writing running and walking workouts only, and only after you allow it in Apple's permission screen. GPS is active only during an active outdoor run (see above).</p>
 
   <h2>3a. Garmin watch connection (optional)</h2>
   <p>
@@ -148,6 +150,17 @@
       data is received or sent. Runs already imported stay in your history like any other run until you delete your account or ask us
       by email to delete them. Any other data received from Garmin is deleted within 30 days of disconnecting.</li>
   </ul>
+
+  <h2>3b. Sending workouts to Apple Watch (optional)</h2>
+  <p>This is turned on only if you choose "send to watch" in the app and allow Apple's permission requests: scheduling workouts on the watch (WorkoutKit), then reading workouts from Apple Health.</p>
+  <ul>
+    <li><strong>What goes to the watch:</strong> your planned workouts (type, steps, durations and pace targets). They go directly from your iPhone to your watch through Apple's systems only; we do not send profile details.</li>
+    <li><strong>What comes back:</strong> a summary of a run you recorded on the watch (time, duration, distance and average heart rate), read from Apple Health to mark the session as done and adjust your next sessions. The route stays on the device only.</li>
+    <li><strong>Turning it off:</strong> you can turn off sending to the watch at any time in the app, and the scheduled workouts are removed from the watch.</li>
+  </ul>
+
+  <h2>3c. Syncing your plan to a calendar (optional)</h2>
+  <p>If you choose to sync your training plan to a calendar, we write the plan's sessions (name, time and duration) to one of the following, as you choose: a calendar on your device; a dedicated Google Calendar the app creates (the permission covers only calendars the app created, not your other calendars); or a personal subscription link you add to your calendar yourself. On your device we read only the list of calendars so you can pick one, not any other events. You can stop syncing at any time in the app.</p>
 
   <h2>4. How we use your data</h2>
   <ul>
